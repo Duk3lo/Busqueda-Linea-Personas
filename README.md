@@ -1,18 +1,41 @@
-## Getting Started
+# Proyecto de Búsqueda de Personas
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+![Vista del programa](assets/Busqueda.png)
 
-## Folder Structure
+Programa en Java que realiza búsquedas personalizadas en un arreglo de objetos `Persona`.
 
-The workspace contains two folders by default, where:
+## Descripción
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+El programa aplica **búsqueda secuencial**, **condiciones personalizadas** y **sobrecarga de métodos**, trabajando con un arreglo de personas.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+### Tipos de búsqueda implementadas
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+1. **Por nombre**  
+   Busca una persona según su nombre (insensible a mayúsculas).
 
-## Dependency Management
+2. **Por edad impar y mayor a un valor dado**  
+   Devuelve la primera persona que cumpla ambas condiciones.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+3. **Por valor numérico del nombre**  
+   Calcula el valor ASCII total del nombre y compara con el valor buscado.
+
+### Clases
+
+- **App** → contiene el método principal y ejecuta las pruebas.  
+- **MetodoBusqueda** → incluye los tres métodos de búsqueda.  
+- **Persona** → define los atributos `name` y `age`.  
+- **ShowConsole** → muestra resultados en consola con métodos sobrecargados.
+
+### Ejecución
+
+Compila y ejecuta con:
+```
+javac *.java
+java App
+```
+
+O simplemente presiona **F5** en Visual Studio Code.
+
+### Autor
+**Joshue Avecillas**  
+Estructura de Datos – 2025

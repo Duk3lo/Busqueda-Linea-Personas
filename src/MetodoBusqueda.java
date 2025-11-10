@@ -21,11 +21,10 @@ public class MetodoBusqueda {
 
     public Persona findByValuesNames(Persona[] personas, int i) {
         for (Persona persona : personas) {
-            char[] letras = persona.getName().toCharArray(); // convertir el nombre a arreglo de caracteres
+            char[] letras = persona.getName().toCharArray();
             int valor = 0;
-
-            for (int j = 0; j < letras.length; j++) {
-                valor += (j + 1) * 10;
+            for (char c : letras) {
+                valor += (int) c;
             }
 
             if (valor == i) {

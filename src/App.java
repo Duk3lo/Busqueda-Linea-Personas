@@ -11,15 +11,18 @@ public class App {
                 new Persona("Jorge", 27),
                 new Persona("Lucia", 24),
         };
-        String name = "Juan";
-        Persona r1persona = metodoBusqueda.searchPersonaByName(personas, "luis");
+        String name = "CaRLos";
+        Persona r1persona = metodoBusqueda.searchPersonaByName(personas, name);
         showConsole.showPersonaResult(r1persona, name);
 
-        Persona r2Persona = metodoBusqueda.searchPersonabByAges(personas, 25);
-        showConsole.showPersonaResult(r2Persona, 25);
+        int rangoMax = 25;
+        int age = 25;
+        Persona r2Persona = metodoBusqueda.searchPersonabByAges(personas, rangoMax);
+        showConsole.showPersonaResult(r2Persona, age);
 
         boolean valorNombre = true;
-        Persona r3Persona = metodoBusqueda.findByValuesNames(personas, 498);
-        showConsole.showPersonaResult(r3Persona, 498, valorNombre);
+        int i = 272;
+        Persona r3Persona = metodoBusqueda.findByValuesNames(personas, i);
+        showConsole.showPersonaResult(r3Persona, i, valorNombre);
     }
 }
